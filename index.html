@@ -3,672 +3,300 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Descubre los mejores destinos del mundo con nuestros paquetes de viaje personalizados. Reserva ahora y vive la experiencia de tu vida." />
-  <title>Tambor AdventuresCR — Viajes Ya!</title>
+  <meta name="description" content="Tours en Tambor, Costa Rica: viaje en lancha a Isla Tortuga, tour en cuadraciclo y tour a caballo. Reserva fácil por WhatsApp." />
+  <title>Tambor Adventures CR — Tours en Tambor, Costa Rica</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- GRAIN OVERLAY -->
-  <div class="grain" aria-hidden="true"></div>
-
-  <!-- CUSTOM CURSOR -->
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-follower" id="cursorFollower"></div>
-
-  <!-- URGENCY BAR -->
-  <div class="urgency-bar">
-    <div class="marquee-track">
-      <span>✦ Oferta especial: hasta 40% de descuento en viajes seleccionados</span>
-      <span>✦ Cancún · París · Roma · Bali · Nueva York</span>
-      <span>✦ Oferta especial: hasta 40% de descuento en viajes seleccionados</span>
-      <span>✦ Cancún · París · Roma · Bali · Nueva York</span>
-      <span>✦ Oferta especial: hasta 40% de descuento en viajes seleccionados</span>
-      <span>✦ Cancún · París · Roma · Bali · Nueva York</span>
-    </div>
-  </div>
+  <a href="#tours" class="skip-link" data-i18n="skip">Saltar al contenido</a>
 
   <!-- NAVBAR -->
-  <nav class="navbar" id="navbar">
+  <header class="navbar" id="navbar">
     <div class="nav-inner">
-      <a href="#" class="logo">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+      <a href="#inicio" class="logo">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M2 17c2 0 2-1.5 4-1.5S8 17 10 17s2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5M2 21c2 0 2-1.5 4-1.5S8 21 10 21s2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5"/></svg>
         Tambor Adventures CR
       </a>
-      <ul class="nav-links">
-        <li><a href="pages/destinos.html">Destinos</a></li>
-        <li><a href="#paquetes">Paquetes</a></li>
-        <li><a href="#testimonios">Testimonios</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-      <a href="#paquetes" class="btn-nav-cta">Reservar <span>→</span></a>
-      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
-        <span></span><span></span>
-      </button>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <section class="hero" id="inicio">
-    <div class="hero-bg-wrap">
-      <div class="hero-slide active" id="slide0" style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=85')"></div>
-      <div class="hero-slide" id="slide1" style="background-image:url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1800&q=85')"></div>
-      <div class="hero-slide" id="slide2" style="background-image:url('https://images.unsplash.com/photo-1530521954074-e64f6810b32d?w=1800&q=85')"></div>
-    </div>
-    <div class="hero-vignette"></div>
-
-    <div class="hero-content">
-      <p class="hero-eyebrow reveal-line">
-        <span class="dot-pulse"></span>
-        Más de 5,000 viajeros satisfechos este año
-      </p>
-      <h1 class="hero-headline">
-        <span class="reveal-line">Vive el viaje</span>
-        <em class="reveal-line">que siempre soñaste</em>
-      </h1>
-      <p class="hero-sub reveal-line">Paquetes all-inclusive, reservas express y atención personalizada 24/7. Tu aventura perfecta comienza aquí.</p>
-      <div class="hero-actions reveal-line">
-        <a href="#paquetes" class="btn-gold">Explorar paquetes</a>
-        <a href="#destinos" class="btn-ghost-hero">Ver destinos ↓</a>
-      </div>
-    </div>
-
-    <div class="hero-stats">
-      <div class="hero-stat">
-        <span class="stat-number" data-target="5000">0</span>
-        <span class="stat-plus">+</span>
-        <p>Viajeros</p>
-      </div>
-      <div class="stat-line"></div>
-      <div class="hero-stat">
-        <span class="stat-number" data-target="120">0</span>
-        <span class="stat-plus">+</span>
-        <p>Destinos</p>
-      </div>
-      <div class="stat-line"></div>
-      <div class="hero-stat">
-        <span class="stat-number" data-target="49">0</span>
-        <span class="stat-slash">/5</span>
-        <p>Calificación</p>
-      </div>
-      <div class="stat-line"></div>
-      <div class="hero-stat">
-        <span class="stat-text">24/7</span>
-        <p>Soporte</p>
-      </div>
-    </div>
-
-    <div class="hero-nav">
-      <button class="slide-btn" id="slidePrev" aria-label="Anterior">←</button>
-      <div class="slide-progress">
-        <span class="progress-dot active" data-index="0"></span>
-        <span class="progress-dot" data-index="1"></span>
-        <span class="progress-dot" data-index="2"></span>
-      </div>
-      <button class="slide-btn" id="slideNext" aria-label="Siguiente">→</button>
-    </div>
-  </section>
-
-  <!-- SEARCH WIDGET -->
-  <section class="search-section">
-    <div class="search-container">
-      <div class="search-label">¿A dónde quieres ir?</div>
-      <form class="search-form" onsubmit="handleSearch(event)">
-        <div class="search-field">
-          <label>Destino</label>
-          <input type="text" placeholder="París, Cancún, Bali..." id="searchDestino" />
+      <nav class="nav-links" id="navLinks" aria-label="Principal">
+        <a href="#tours" data-i18n="nav.tours">Tours</a>
+        <a href="#isla-tortuga" data-i18n="nav.isla">Isla Tortuga</a>
+        <a href="#galeria" data-i18n="nav.gallery">Fotos</a>
+        <a href="#reservar" data-i18n="nav.how">Cómo reservar</a>
+        <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+      </nav>
+      <div class="nav-right">
+        <div class="lang-switch" role="group" aria-label="Idioma / Language">
+          <button type="button" class="lang-btn" data-lang="es" aria-pressed="true">ES</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
         </div>
-        <div class="search-divider"></div>
-        <div class="search-field">
-          <label>Salida</label>
-          <input type="date" id="searchSalida" />
-        </div>
-        <div class="search-divider"></div>
-        <div class="search-field">
-          <label>Regreso</label>
-          <input type="date" id="searchRegreso" />
-        </div>
-        <div class="search-divider"></div>
-        <div class="search-field">
-          <label>Personas</label>
-          <select id="searchPersonas">
-            <option>1 persona</option>
-            <option>2 personas</option>
-            <option>3 personas</option>
-            <option>4+ personas</option>
-          </select>
-        </div>
-        <button type="submit" class="search-btn">Buscar</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- TRUST BAR -->
-  <section class="trust-bar">
-    <div class="trust-grid">
-      <div class="trust-item">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        <div><strong>Reserva 100% segura</strong><p>Pagos encriptados y garantía de devolución</p></div>
-      </div>
-      <div class="trust-item">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-        <div><strong>Soporte 24/7</strong><p>Asesores disponibles en todo momento</p></div>
-      </div>
-      <div class="trust-item">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
-        <div><strong>Mejor precio garantizado</strong><p>Igualamos cualquier precio más bajo</p></div>
-      </div>
-      <div class="trust-item">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-        <div><strong>Cancelación flexible</strong><p>Cancela hasta 48h antes sin penalización</p></div>
+        <button class="nav-toggle" id="navToggle" aria-label="Menú" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
-  </section>
+  </header>
 
-  <!-- DESTINATIONS -->
-  <section class="section" id="destinos">
-    <div class="section-head">
-      <div class="section-meta">
-        <span class="section-num">01</span>
-        <span class="section-rule"></span>
-        <span class="section-tag">Más reservados</span>
-      </div>
-      <h2 class="section-title">Destinos<br><em>que enamoran</em></h2>
-      <p class="section-sub">Los lugares más codiciados por nuestros viajeros, curados con precisión.</p>
-    </div>
+  <main>
 
-    <div class="dest-scroll-wrap">
-      <div class="dest-track" id="destTrack">
-
-        <article class="dest-card" onclick="openModal('Paris')">
-          <div class="dest-img-wrap">
-            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=900&q=85" alt="París" loading="lazy" />
-          </div>
-          <div class="dest-body">
-            <div class="dest-top">
-              <span class="dest-tag">Más popular</span>
-              <span class="dest-rating">4.9 ★</span>
-            </div>
-            <h3>París</h3>
-            <p>Francia</p>
-            <div class="dest-price-row">
-              <span>Desde</span>
-              <strong>$899</strong>
-              <span>/persona</span>
-            </div>
-          </div>
-          <div class="dest-hover-cta">Ver paquete →</div>
-        </article>
-
-        <article class="dest-card" onclick="openModal('Cancun')">
-          <div class="dest-img-wrap">
-            <img src="https://images.unsplash.com/photo-1552074284-5e88ef1aef18?w=900&q=85" alt="Cancún" loading="lazy" />
-          </div>
-          <div class="dest-body">
-            <div class="dest-top">
-              <span class="dest-tag">Playa</span>
-              <span class="dest-rating">4.8 ★</span>
-            </div>
-            <h3>Cancún</h3>
-            <p>México</p>
-            <div class="dest-price-row">
-              <span>Desde</span>
-              <strong>$650</strong>
-              <span>/persona</span>
-            </div>
-          </div>
-          <div class="dest-hover-cta">Ver paquete →</div>
-        </article>
-
-        <article class="dest-card" onclick="openModal('Roma')">
-          <div class="dest-img-wrap">
-            <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=900&q=85" alt="Roma" loading="lazy" />
-          </div>
-          <div class="dest-body">
-            <div class="dest-top">
-              <span class="dest-tag">Historia</span>
-              <span class="dest-rating">4.9 ★</span>
-            </div>
-            <h3>Roma</h3>
-            <p>Italia</p>
-            <div class="dest-price-row">
-              <span>Desde</span>
-              <strong>$799</strong>
-              <span>/persona</span>
-            </div>
-          </div>
-          <div class="dest-hover-cta">Ver paquete →</div>
-        </article>
-
-        <article class="dest-card" onclick="openModal('Bali')">
-          <div class="dest-img-wrap">
-            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=900&q=85" alt="Bali" loading="lazy" />
-          </div>
-          <div class="dest-body">
-            <div class="dest-top">
-              <span class="dest-tag">Exótico</span>
-              <span class="dest-rating">4.8 ★</span>
-            </div>
-            <h3>Bali</h3>
-            <p>Indonesia</p>
-            <div class="dest-price-row">
-              <span>Desde</span>
-              <strong>$1,100</strong>
-              <span>/persona</span>
-            </div>
-          </div>
-          <div class="dest-hover-cta">Ver paquete →</div>
-        </article>
-
-        <article class="dest-card" onclick="openModal('NYC')">
-          <div class="dest-img-wrap">
-            <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=900&q=85" alt="Nueva York" loading="lazy" />
-          </div>
-          <div class="dest-body">
-            <div class="dest-top">
-              <span class="dest-tag">Ciudad</span>
-              <span class="dest-rating">4.7 ★</span>
-            </div>
-            <h3>Nueva York</h3>
-            <p>Estados Unidos</p>
-            <div class="dest-price-row">
-              <span>Desde</span>
-              <strong>$750</strong>
-              <span>/persona</span>
-            </div>
-          </div>
-          <div class="dest-hover-cta">Ver paquete →</div>
-        </article>
-
-      </div>
-      <div class="dest-scroll-hint">← Desliza para explorar →</div>
-    </div>
-
-    <div class="section-cta">
-      <a href="#contacto" class="btn-outline-gold">Ver todos los destinos</a>
-    </div>
-  </section>
-
-  <!-- PACKAGES -->
-  <section class="packages-section" id="paquetes">
-    <div class="section-head centered">
-      <div class="section-meta center">
-        <span class="section-num">02</span>
-        <span class="section-rule"></span>
-        <span class="section-tag">Elige tu plan</span>
-      </div>
-      <h2 class="section-title centered-title">Paquetes para<br><em>cada aventurero</em></h2>
-      <p class="section-sub">Todo incluido, sin sorpresas, con la mejor experiencia garantizada.</p>
-    </div>
-
-    <div class="packages-grid">
-
-      <div class="pkg-card">
-        <div class="pkg-tier">Esencial</div>
-        <h3 class="pkg-name">Escapada Express</h3>
-        <p class="pkg-desc">Perfecto para fines de semana largos</p>
-        <div class="pkg-price">
-          <span>$</span>299<small>/persona</small>
-        </div>
-        <ul class="pkg-list">
-          <li class="on">3 noches de alojamiento</li>
-          <li class="on">Vuelos de ida y vuelta</li>
-          <li class="on">Desayuno incluido</li>
-          <li class="on">Traslado aeropuerto</li>
-          <li class="on">Seguro de viaje básico</li>
-          <li class="off">Guía turístico personal</li>
-          <li class="off">Actividades premium</li>
-        </ul>
-        <a href="#contacto" class="pkg-btn outline">Reservar →</a>
-      </div>
-
-      <div class="pkg-card featured">
-        <div class="pkg-best">Más elegido</div>
-        <div class="pkg-tier">Completo</div>
-        <h3 class="pkg-name">Aventura Total</h3>
-        <p class="pkg-desc">La experiencia completa e inolvidable</p>
-        <div class="pkg-price">
-          <span>$</span>699<small>/persona</small>
-        </div>
-        <ul class="pkg-list">
-          <li class="on">7 noches hotel 4 estrellas</li>
-          <li class="on">Vuelos premium</li>
-          <li class="on">Pensión completa</li>
-          <li class="on">Traslados privados</li>
-          <li class="on">Seguro de viaje completo</li>
-          <li class="on">Guía turístico personal</li>
-          <li class="on">3 actividades incluidas</li>
-        </ul>
-        <a href="#contacto" class="pkg-btn gold">Reservar ahora →</a>
-      </div>
-
-      <div class="pkg-card">
-        <div class="pkg-tier">Élite</div>
-        <h3 class="pkg-name">Lujo Sin Límites</h3>
-        <p class="pkg-desc">Para quienes merecen lo excepcional</p>
-        <div class="pkg-price">
-          <span>$</span>1,499<small>/persona</small>
-        </div>
-        <ul class="pkg-list">
-          <li class="on">10 noches hotel 5 estrellas</li>
-          <li class="on">Business class</li>
-          <li class="on">Todo incluido premium</li>
-          <li class="on">Chofer privado</li>
-          <li class="on">Seguro VIP</li>
-          <li class="on">Concierge personal</li>
-          <li class="on">Actividades ilimitadas</li>
-        </ul>
-        <a href="#contacto" class="pkg-btn outline">Reservar →</a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- PROMO / URGENCY -->
-  <section class="promo-section">
-    <div class="promo-img">
-      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1000&q=85" alt="Caribe" loading="lazy" />
-      <div class="promo-img-overlay"></div>
-    </div>
-    <div class="promo-content">
-      <div class="promo-eyebrow">Oferta relámpago</div>
-      <h2>Caribe all-inclusive<br>para 2 personas</h2>
-      <p>7 noches · vuelos incluidos · hotel 5 estrellas · todas las comidas</p>
-
-      <div class="promo-pricing">
-        <s>$2,400</s>
-        <span class="promo-price-big">$1,440</span>
-        <span class="promo-badge">–40%</span>
-      </div>
-
-      <p class="promo-scarcity">Solo quedan <strong id="spots">7</strong> cupos disponibles</p>
-
-      <div class="promo-timer">
-        <div class="timer-unit">
-          <span id="t-h">23</span>
-          <label>horas</label>
-        </div>
-        <div class="timer-colon">:</div>
-        <div class="timer-unit">
-          <span id="t-m">59</span>
-          <label>min</label>
-        </div>
-        <div class="timer-colon">:</div>
-        <div class="timer-unit">
-          <span id="t-s">47</span>
-          <label>seg</label>
-        </div>
-      </div>
-
-      <a href="#contacto" class="btn-gold promo-cta">Quiero esta oferta</a>
-      <p class="promo-note">Sin costos ocultos · Cancelación gratuita 48h</p>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section class="section" id="como">
-    <div class="section-head centered">
-      <div class="section-meta center">
-        <span class="section-num">03</span>
-        <span class="section-rule"></span>
-        <span class="section-tag">Simple y rápido</span>
-      </div>
-      <h2 class="section-title centered-title">Reserva en<br><em>3 pasos</em></h2>
-    </div>
-
-    <div class="steps-row">
-      <div class="step-card">
-        <div class="step-index">01</div>
-        <div class="step-icon-wrap">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-        </div>
-        <h3>Elige tu destino</h3>
-        <p>Explora nuestros destinos y paquetes. Filtra por precio, duración y estilo de viaje.</p>
-      </div>
-      <div class="step-connector"></div>
-      <div class="step-card">
-        <div class="step-index">02</div>
-        <div class="step-icon-wrap">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        </div>
-        <h3>Personaliza tu viaje</h3>
-        <p>Ajusta fechas, habitaciones, actividades y servicios adicionales a tu medida.</p>
-      </div>
-      <div class="step-connector"></div>
-      <div class="step-card">
-        <div class="step-index">03</div>
-        <div class="step-icon-wrap">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-        </div>
-        <h3>Confirma y viaja</h3>
-        <p>Paga de forma segura y recibe toda la documentación en tu correo en minutos.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section class="section testimonials-section" id="testimonios">
-    <div class="testimonials-left">
-      <div class="section-meta">
-        <span class="section-num">04</span>
-        <span class="section-rule"></span>
-        <span class="section-tag">Testimonios</span>
-      </div>
-      <h2 class="section-title">Más de 5,000<br><em>historias felices</em></h2>
-      <div class="overall-stars">
-        <div class="stars-row">★★★★★</div>
-        <p><strong>4.9 / 5</strong> basado en 1,240 reseñas</p>
-      </div>
-      <div class="trust-logos">
-        <span>TripAdvisor</span>
-        <span>Google Reviews</span>
-        <span>IATA</span>
-        <span>Forbes Travel</span>
-      </div>
-    </div>
-    <div class="testimonials-right">
-      <div class="testimonial-card">
-        <div class="test-stars">★★★★★</div>
-        <blockquote>"ViajaYa superó todas mis expectativas. El paquete a Cancún fue perfecto: hotel increíble, vuelos puntuales y el servicio al cliente impecable. Ya estoy planificando mi próximo viaje."</blockquote>
-        <div class="test-author">
-          <img src="https://i.pravatar.cc/48?img=1" alt="María G." />
-          <div>
-            <strong>María González</strong>
-            <span>Cancún, México</span>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial-card featured-test">
-        <div class="test-stars">★★★★★</div>
-        <blockquote>"Reservé el paquete de luna de miel a Bali y fue mágico. Cada detalle estaba cuidado: desde el traslado hasta las excursiones privadas. El mejor dinero que hemos gastado como pareja."</blockquote>
-        <div class="test-author">
-          <img src="https://i.pravatar.cc/48?img=5" alt="Carlos R." />
-          <div>
-            <strong>Carlos & Laura Ramírez</strong>
-            <span>Bali, Indonesia</span>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <div class="test-stars">★★★★★</div>
-        <blockquote>"Soy viajera frecuente y ViajaYa es la agencia más confiable que he usado. Precios reales, sin letra pequeña y el soporte 24/7 me salvó cuando perdí un vuelo."</blockquote>
-        <div class="test-author">
-          <img src="https://i.pravatar.cc/48?img=9" alt="Ana P." />
-          <div>
-            <strong>Ana Pérez</strong>
-            <span>París, Francia</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- NEWSLETTER -->
-  <section class="newsletter-section">
-    <div class="newsletter-wrap">
-      <div class="newsletter-deco">✦</div>
-      <h2>Ofertas exclusivas<br><em>en tu correo</em></h2>
-      <p>Sé el primero en recibir descuentos de hasta 50% y paquetes secretos.</p>
-      <form class="newsletter-form" onsubmit="handleNewsletter(event)">
-        <input type="email" placeholder="tu@correo.com" required />
-        <button type="submit">Suscribirse →</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="section contact-section" id="contacto">
-    <div class="contact-grid">
-      <div class="contact-left">
-        <div class="section-meta">
-          <span class="section-num">05</span>
-          <span class="section-rule"></span>
-          <span class="section-tag">Hablemos</span>
-        </div>
-        <h2 class="section-title">¿Listo para tu<br><em>próxima aventura?</em></h2>
-        <p class="contact-desc">Un asesor de viajes te contactará en menos de 2 horas para diseñar el viaje perfecto a tu medida y presupuesto.</p>
-        <div class="contact-channels">
-          <a href="tel:+18001234567" class="channel">
-            <div class="channel-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
-            </div>
-            <div>
-              <strong>Llámanos ahora</strong>
-              <span>+1 (800) VIAJAYA</span>
-            </div>
-          </a>
-          <a href="https://wa.me/18001234567" class="channel">
-            <div class="channel-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-            </div>
-            <div>
-              <strong>WhatsApp</strong>
-              <span>Respuesta en menos de 10 min</span>
-            </div>
-          </a>
-          <a href="mailto:hola@viajaya.com" class="channel">
-            <div class="channel-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            </div>
-            <div>
-              <strong>Email</strong>
-              <span>hola@viajaya.com</span>
-            </div>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <img class="hero-img" src="images/isla-tortuga/isla-tortuga-03.jpeg" alt="Lancha frente a la playa de Isla Tortuga, Costa Rica" data-i18n-alt="alt.hero" width="1600" height="1200" />
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow" data-i18n="hero.eyebrow">Tambor · Península de Nicoya · Costa Rica</p>
+        <h1 data-i18n="hero.title">Tours en Tambor: mar, playa y aventura</h1>
+        <p class="hero-sub" data-i18n="hero.sub">Viaja en lancha a Isla Tortuga, recorre la zona en cuadraciclo o pasea a caballo. Tú eliges el tour y nosotros nos encargamos del resto.</p>
+        <div class="hero-actions">
+          <a href="#tours" class="btn btn-primary" data-i18n="hero.cta1">Ver los tours</a>
+          <a href="#contacto" class="btn btn-whatsapp" data-wa="general" target="_blank" rel="noopener">
+            <svg class="wa-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#wa-path"/></svg>
+            <span data-i18n="hero.cta2">Escribir por WhatsApp</span>
           </a>
         </div>
       </div>
-      <div class="contact-right">
-        <form class="contact-form" onsubmit="handleContact(event)">
-          <h3>Cotización gratuita en 2 horas</h3>
+    </section>
+
+    <!-- TOURS -->
+    <section class="section" id="tours">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-tag" data-i18n="tours.tag">Elige tu aventura</p>
+          <h2 data-i18n="tours.title">Nuestros tours</h2>
+          <p class="section-sub" data-i18n="tours.sub">Tres formas de conocer Tambor y sus alrededores.</p>
+        </div>
+
+        <div class="tour-grid">
+
+          <article class="tour-card">
+            <div class="tour-media">
+              <img src="images/isla-tortuga/isla-tortuga-10.jpeg" alt="Vista aérea de la costa y el mar turquesa" data-i18n-alt="alt.aerial" loading="lazy" width="948" height="1600" />
+              <span class="tour-badge" data-i18n="t1.badge">En lancha</span>
+            </div>
+            <div class="tour-body">
+              <h3 data-i18n="t1.name">Isla Tortuga</h3>
+              <p data-i18n="t1.desc">Paseo en lancha a una isla de arena blanca y agua turquesa. Snorkel, playa y frutas frescas.</p>
+              <a href="#isla-tortuga" class="btn btn-primary btn-block" data-i18n="t1.btn">Ver detalles y fotos</a>
+            </div>
+          </article>
+
+          <article class="tour-card" id="cuadraciclo">
+            <div class="tour-media tour-media-empty">
+              <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="17" r="3.2"/><circle cx="18" cy="17" r="3.2"/><path d="M9 17h6M6 13.8 8.5 9H14l2.5 4.8M11 9V6.5h3"/></svg>
+              <img src="images/isla-tortuga/tour-cuadraciclo-01.png" alt="Disfruta de la naturaleza en un cuadraciclo" data-i18n-alt="alt.aerial" loading="lazy" width="948" height="1600" />
+              <span class="tour-badge" data-i18n="t2.badge">En cuadraciclo</span>
+            </div>
+            <div class="tour-body">
+              <h3 data-i18n="t2.name">Tour en cuadraciclo</h3>
+              <p data-i18n="t2.desc">Aventura en cuadraciclo por los alrededores de Tambor. Escríbenos y te contamos rutas, horarios y precio.</p>
+              <a href="#contacto" class="btn btn-outline btn-block" data-wa="quad" target="_blank" rel="noopener" data-i18n="ask">Consultar por WhatsApp</a>
+            </div>
+          </article>
+
+          <article class="tour-card" id="caballo">
+            <div class="tour-media tour-media-empty">
+              <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20v-5.5L3.5 11 7 4l2 2.5c4.5-.5 9 2 9.500 6.500V20M9.500 20v-4.500h5V20M7 8.500h.01"/></svg>
+              <span data-i18n="soon">Fotos próximamente</span>
+            </div>
+            <div class="tour-body">
+              <h3 data-i18n="t3.name">Tour a caballo</h3>
+              <p data-i18n="t3.desc">Paseo a caballo para disfrutar la naturaleza de la zona con calma. Escríbenos y te contamos rutas, horarios y precio.</p>
+              <a href="#contacto" class="btn btn-outline btn-block" data-wa="horse" target="_blank" rel="noopener" data-i18n="ask">Consultar por WhatsApp</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ISLA TORTUGA -->
+    <section class="section section-alt" id="isla-tortuga">
+      <div class="wrap">
+        <div class="detail-grid">
+          <div class="detail-photo">
+            <img src="images/isla-tortuga/isla-tortuga-12.jpeg" alt="Playa tranquila de agua transparente en Isla Tortuga" data-i18n-alt="alt.beach" loading="lazy" width="944" height="1600" />
+          </div>
+          <div class="detail-text">
+            <p class="section-tag" data-i18n="isla.tag">Tour destacado</p>
+            <h2 data-i18n="isla.title">Tour a Isla Tortuga</h2>
+            <p class="lead" data-i18n="isla.p1">Salimos en lancha desde Tambor hacia Isla Tortuga, una de las playas más lindas del Golfo de Nicoya: arena blanca, palmeras y agua turquesa.</p>
+
+            <h3 data-i18n="isla.listTitle">Lo que vivirás</h3>
+            <ul class="check-list">
+              <li data-i18n="isla.li1">Paseo en lancha por la costa</li>
+              <li data-i18n="isla.li2">Snorkel en agua clara y tranquila</li>
+              <li data-i18n="isla.li3">Tiempo libre en la playa para nadar y descansar</li>
+              <li data-i18n="isla.li4">Frutas frescas: piña y sandía</li>
+              <li data-i18n="isla.li5">Con suerte, delfines durante el viaje</li>
+            </ul>
+
+            <div class="info-box">
+              <h3 data-i18n="isla.bringTitle">Qué llevar</h3>
+              <p data-i18n="isla.bring">Traje de baño, toalla, bloqueador solar, agua y ganas de pasarla bien.</p>
+            </div>
+
+            <p class="note" data-i18n="isla.note">Precio, horario de salida y detalles: escríbenos y te respondemos por WhatsApp.</p>
+            <a href="#contacto" class="btn btn-whatsapp" data-wa="isla" target="_blank" rel="noopener">
+              <svg class="wa-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#wa-path"/></svg>
+              <span data-i18n="isla.cta">Reservar Isla Tortuga</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section" id="galeria">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-tag" data-i18n="gal.tag">Galería</p>
+          <h2 data-i18n="gal.title">Fotos del tour a Isla Tortuga</h2>
+          <p class="section-sub" data-i18n="gal.sub">Fotos reales de nuestros viajes. Toca una foto para verla en grande.</p>
+        </div>
+        <div class="gallery" id="gallery">
+          <button type="button" class="gallery-item"><img src="images/isla-tortuga/isla-tortuga-03.jpeg" alt="Lancha frente a la playa de Isla Tortuga, Costa Rica" data-i18n-alt="alt.hero" loading="lazy" /></button>
+          <button type="button" class="gallery-item"><img src="images/isla-tortuga/isla-tortuga-09.jpeg" alt="Grupo haciendo snorkel en el mar" data-i18n-alt="alt.snorkel" loading="lazy" /></button>
+          <button type="button" class="gallery-item"><img src="images/isla-tortuga/isla-tortuga-07.jpeg" alt="Piña y sandía servidas en la playa" data-i18n-alt="alt.fruit" loading="lazy" /></button>
+          <button type="button" class="gallery-item"><img src="images/isla-tortuga/isla-tortuga-16.jpeg" alt="Grupo de viajeros en la lancha" data-i18n-alt="alt.group" loading="lazy" /></button>
+          <button type="button" class="gallery-item"><img src="images/isla-tortuga/isla-tortuga-05.jpeg" alt="Delfines nadando junto a la lancha" data-i18n-alt="alt.dolphins" loading="lazy" /></button>
+          <button type="button" class="gallery-item"><img src="images/isla-tortuga/isla-tortuga-02.jpeg" alt="Palmeras y playa en Isla Tortuga" data-i18n-alt="alt.palms" loading="lazy" /></button>
+          <button type="button" class="gallery-item"><img src="images/isla-tortuga/isla-tortuga-27.jpeg" alt="Viajeros nadando en agua turquesa" data-i18n-alt="alt.swim" loading="lazy" /></button>
+          <button type="button" class="gallery-item"><img src="images/isla-tortuga/isla-tortuga-25.jpeg" alt="Vista aérea de la costa y el mar turquesa" data-i18n-alt="alt.aerial" loading="lazy" /></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW TO BOOK -->
+    <section class="section section-alt" id="reservar">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-tag" data-i18n="how.tag">Simple y rápido</p>
+          <h2 data-i18n="how.title">Cómo reservar</h2>
+        </div>
+        <ol class="steps">
+          <li class="step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.s1t">Elige tu tour</h3>
+            <p data-i18n="how.s1d">Isla Tortuga, cuadraciclo o caballo.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.s2t">Escríbenos por WhatsApp</h3>
+            <p data-i18n="how.s2d">Dinos la fecha y cuántas personas van.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.s3t">Recibe tu confirmación</h3>
+            <p data-i18n="how.s3d">Te confirmamos disponibilidad, precio y punto de encuentro.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contacto">
+      <div class="wrap contact-grid">
+        <div>
+          <p class="section-tag" data-i18n="contact.tag">Contacto</p>
+          <h2 data-i18n="contact.title">Reserva o haz tu consulta</h2>
+          <p class="section-sub" data-i18n="contact.sub">Respondemos en español y en inglés.</p>
+
+          <div class="channels">
+            <a href="#contacto" class="channel" data-wa="general" target="_blank" rel="noopener">
+              <span class="channel-icon channel-wa"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#wa-path"/></svg></span>
+              <span><strong>WhatsApp</strong><span data-contact="phone"></span></span>
+            </a>
+            <a href="#contacto" class="channel" data-contact-link="phone">
+              <span class="channel-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 16.920v3a2 2 0 01-2.180 2 19.790 19.790 0 01-8.630-3.070A19.500 19.500 0 013.070 10.800a19.790 19.790 0 01-3.070-8.670A2 2 0 012 0h3a2 2 0 012 1.720c.127.960.361 1.903.700 2.810a2 2 0 01-.450 2.110L6.090 7.910a16 16 0 006 6l1.270-1.270a2 2 0 012.110-.450c.907.339 1.850.573 2.810.700A2 2 0 0122 14.920z" transform="translate(1 1) scale(.92)"/></svg></span>
+              <span><strong data-i18n="contact.call">Llamar</strong><span data-contact="phone"></span></span>
+            </a>
+            <a href="#contacto" class="channel" data-contact-link="email" hidden>
+              <span class="channel-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></span>
+              <span><strong data-i18n="contact.email">Correo</strong><span data-contact="email"></span></span>
+            </a>
+            <div class="channel channel-static">
+              <span class="channel-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 22s7-6.200 7-12a7 7 0 10-14 0c0 5.800 7 12 7 12z"/><circle cx="12" cy="10" r="2.500"/></svg></span>
+              <span><strong data-i18n="contact.where">Ubicación</strong><span data-i18n="contact.place">Tambor, Puntarenas, Costa Rica</span></span>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <h3 data-i18n="form.title">Envíanos tu consulta</h3>
+          <div class="form-field">
+            <label for="fName" data-i18n="form.name">Tu nombre</label>
+            <input type="text" id="fName" autocomplete="name" required />
+          </div>
+          <div class="form-field">
+            <label for="fTour" data-i18n="form.tour">Tour</label>
+            <select id="fTour">
+              <option value="isla" data-i18n="t1.name">Isla Tortuga</option>
+              <option value="quad" data-i18n="t2.name">Tour en cuadraciclo</option>
+              <option value="horse" data-i18n="t3.name">Tour a caballo</option>
+            </select>
+          </div>
           <div class="form-row">
             <div class="form-field">
-              <label>Nombre</label>
-              <input type="text" placeholder="Tu nombre completo" required />
+              <label for="fDate" data-i18n="form.date">Fecha</label>
+              <input type="date" id="fDate" />
             </div>
             <div class="form-field">
-              <label>Teléfono</label>
-              <input type="tel" placeholder="+1 (000) 000-0000" required />
+              <label for="fPeople" data-i18n="form.people">Personas</label>
+              <input type="number" id="fPeople" min="1" max="50" value="2" inputmode="numeric" />
             </div>
           </div>
           <div class="form-field">
-            <label>Correo electrónico</label>
-            <input type="email" placeholder="tu@correo.com" required />
+            <label for="fMsg" data-i18n="form.msg">Mensaje (opcional)</label>
+            <textarea id="fMsg" rows="3"></textarea>
           </div>
-          <div class="form-field">
-            <label>Destino deseado</label>
-            <input type="text" placeholder="¿A dónde quieres viajar?" />
-          </div>
-          <div class="form-field">
-            <label>Detalles de tu viaje</label>
-            <textarea placeholder="Fechas, número de personas, presupuesto, preferencias..." rows="4"></textarea>
-          </div>
-          <button type="submit" class="btn-gold btn-form-submit">Solicitar cotización gratuita →</button>
-          <p class="form-note">Tu información es privada. Nunca la compartimos con terceros.</p>
+          <button type="submit" class="btn btn-whatsapp btn-block">
+            <svg class="wa-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#wa-path"/></svg>
+            <span data-i18n="form.submit">Enviar por WhatsApp</span>
+          </button>
+          <p class="form-note" data-i18n="form.note">Se abrirá WhatsApp con tu mensaje listo para enviar.</p>
         </form>
       </div>
-    </div>
-  </section>
+    </section>
+
+  </main>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a href="#" class="footer-logo">ViajaYa</a>
-        <p>Hacemos realidad los viajes que siempre soñaste, con la mejor relación calidad-precio del mercado.</p>
-        <div class="footer-social">
-          <a href="#" aria-label="Instagram">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg>
-          </a>
-          <a href="#" aria-label="Facebook">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-          </a>
-          <a href="#" aria-label="TikTok">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.27 8.27 0 004.84 1.55V6.81a4.85 4.85 0 01-1.07-.12z"/></svg>
-          </a>
-        </div>
+    <div class="wrap footer-inner">
+      <div>
+        <p class="footer-logo">Tambor Adventures CR</p>
+        <p data-i18n="footer.tagline">Tours en Tambor, Puntarenas, Costa Rica.</p>
       </div>
-      <div class="footer-links">
-        <h4>Destinos</h4>
-        <ul>
-          <li><a href="#">Europa</a></li>
-          <li><a href="#">Caribe</a></li>
-          <li><a href="#">Asia</a></li>
-          <li><a href="#">América</a></li>
-          <li><a href="#">Cruceros</a></li>
-        </ul>
-      </div>
-      <div class="footer-links">
-        <h4>Servicios</h4>
-        <ul>
-          <li><a href="#">Reserva de vuelos</a></li>
-          <li><a href="#">Hoteles</a></li>
-          <li><a href="#">Paquetes todo incluido</a></li>
-          <li><a href="#">Seguro de viaje</a></li>
-          <li><a href="#">Tours guiados</a></li>
-        </ul>
-      </div>
-      <div class="footer-links">
-        <h4>Empresa</h4>
-        <ul>
-          <li><a href="#">Sobre nosotros</a></li>
-          <li><a href="#">Blog de viajes</a></li>
-          <li><a href="#">Trabaja con nosotros</a></li>
-          <li><a href="#">Términos y condiciones</a></li>
-          <li><a href="#">Privacidad</a></li>
-        </ul>
-      </div>
+      <nav class="footer-links" aria-label="Pie de página">
+        <a href="#tours" data-i18n="nav.tours">Tours</a>
+        <a href="#isla-tortuga" data-i18n="nav.isla">Isla Tortuga</a>
+        <a href="#galeria" data-i18n="nav.gallery">Fotos</a>
+        <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+      </nav>
     </div>
-    <div class="footer-bottom">
-      <p>© 2025 ViajaYa. Todos los derechos reservados. IATA Certified · SSL Secure</p>
-      <div class="payment-methods">
-        <span>VISA</span>
-        <span>Mastercard</span>
-        <span>PayPal</span>
-        <span>Stripe</span>
-      </div>
-    </div>
+    <p class="footer-copy">© <span id="year">2026</span> Tambor Adventures CR</p>
   </footer>
 
-  <!-- DESTINATION MODAL -->
-  <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
-    <div class="modal" onclick="event.stopPropagation()">
-      <button class="modal-close" onclick="closeModal()">✕</button>
-      <div id="modalContent"></div>
-    </div>
-  </div>
-
-  <!-- WHATSAPP -->
-  <a href="https://wa.me/18001234567?text=Hola,%20quiero%20información%20sobre%20viajes"
-     class="whatsapp-fab" target="_blank" rel="noopener" aria-label="WhatsApp">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    <span>¿Necesitas ayuda?</span>
+  <!-- WHATSAPP FLOATING BUTTON -->
+  <a href="#contacto" class="whatsapp-fab" data-wa="general" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#wa-path"/></svg>
   </a>
 
-  <!-- TOAST -->
-  <div class="toast" id="toast"></div>
+  <!-- LIGHTBOX -->
+  <dialog class="lightbox" id="lightbox">
+    <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Cerrar">✕</button>
+    <img id="lightboxImg" alt="" />
+  </dialog>
+
+  <!-- SHARED ICONS -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <path id="wa-path" d="M17.472 14.382c-.297-.149-1.758-.867-2.030-.967-.273-.099-.471-.148-.670.150-.197.297-.767.966-.940 1.164-.173.199-.347.223-.644.075-.297-.150-1.255-.463-2.390-1.475-.883-.788-1.480-1.761-1.653-2.059-.173-.297-.018-.458.130-.606.134-.133.298-.347.446-.520.149-.174.198-.298.298-.497.099-.198.050-.371-.025-.520-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.500-.669-.510-.173-.008-.371-.010-.570-.010-.198 0-.520.074-.792.372-.272.297-1.040 1.016-1.040 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.200 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.360.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.570-.347m-5.421 7.403h-.004a9.870 9.870 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.860 9.860 0 01-1.510-5.260c.001-5.450 4.436-9.884 9.888-9.884 2.640 0 5.122 1.030 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.450-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.050 0C5.495 0 .160 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.480-8.413z"/>
+    </defs>
+  </svg>
 
   <script src="app.js"></script>
 </body>
