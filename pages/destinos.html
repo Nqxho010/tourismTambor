@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explora los 14 destinos disponibles con Tambor Adventures CR. Europa, Caribe, Asia, América y más. Precios desde $480/persona." />
+  <title>Destinos — Tambor Adventures CR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="destinos.css" />
+</head>
+<body>
+
+  <!-- GRAIN -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- URGENCY BAR -->
+  <div class="urgency-bar">
+    <div class="marquee-track">
+      <span>✦ Oferta especial: hasta 40% de descuento en viajes seleccionados</span>
+      <span>✦ 14 destinos disponibles · Desde $480 por persona</span>
+      <span>✦ Oferta especial: hasta 40% de descuento en viajes seleccionados</span>
+      <span>✦ 14 destinos disponibles · Desde $480 por persona</span>
+      <span>✦ Oferta especial: hasta 40% de descuento en viajes seleccionados</span>
+      <span>✦ 14 destinos disponibles · Desde $480 por persona</span>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="../index.html" class="logo">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/>
+        </svg>
+        Tambor Adventures CR
+      </a>
+      <ul class="nav-links">
+        <li><a href="destinos.html" style="color:var(--cream)">Destinos</a></li>
+        <li><a href="../index.html#paquetes">Paquetes</a></li>
+        <li><a href="../index.html#testimonios">Testimonios</a></li>
+        <li><a href="../index.html#contacto">Contacto</a></li>
+      </ul>
+      <a href="../index.html#paquetes" class="btn-nav-cta">Reservar <span>→</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="ph">
+    <div class="ph-bg" style="background-image:url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1800&q=85')"></div>
+    <div class="ph-vignette"></div>
+    <div class="ph-inner">
+      <div class="ph-crumb">
+        <a href="../index.html">Inicio</a>
+        <span class="sep">/</span>
+        <span>Destinos</span>
+      </div>
+      <h1>Explora el <em>mundo entero</em></h1>
+      <div class="ph-meta">
+        <span class="ph-stat">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          <strong>14</strong>&nbsp;destinos disponibles
+        </span>
+        <span class="ph-stat">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          Desde&nbsp;<strong>$480</strong>&nbsp;/persona
+        </span>
+        <span class="ph-stat">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <strong>4.8★</strong>&nbsp;rating promedio
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FILTER BAR -->
+  <div class="filter-bar" id="filterBar">
+    <div class="filter-bar-inner">
+      <div class="filter-tabs" id="filterTabs">
+        <button class="ftab active" data-filter="todos">Todos <span class="ftab-count">14</span></button>
+        <button class="ftab" data-filter="europa">Europa <span class="ftab-count">4</span></button>
+        <button class="ftab" data-filter="caribe">Caribe <span class="ftab-count">2</span></button>
+        <button class="ftab" data-filter="asia">Asia <span class="ftab-count">3</span></button>
+        <button class="ftab" data-filter="america">América <span class="ftab-count">3</span></button>
+        <button class="ftab" data-filter="oriente">Oriente Medio <span class="ftab-count">2</span></button>
+      </div>
+      <div class="filter-sort-wrap">
+        <label for="sortSelect">Ordenar:</label>
+        <select class="sort-select" id="sortSelect">
+          <option value="popular">Más popular</option>
+          <option value="precio-asc">Menor precio</option>
+          <option value="precio-desc">Mayor precio</option>
+          <option value="rating">Mejor calificación</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- DESTINATIONS -->
+  <section class="destinos-section">
+    <div class="destinos-wrap">
+      <div class="destinos-info">
+        <p class="destinos-count" id="destCount">Mostrando <strong>14</strong> destinos</p>
+      </div>
+
+      <div class="dgrid" id="dgrid">
+
+        <!-- ── EUROPA ───────────────────────────────── -->
+
+        <!-- París — Featured -->
+        <article class="dgc featured reveal" data-region="europa" data-price="899" data-rating="4.9" data-order="1">
+          <div class="dgc-img">
+            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1200&q=85" alt="París, Francia" loading="lazy" />
+          </div>
+          <div class="dgc-ov"></div>
+          <div class="dgc-body">
+            <div class="dgc-head">
+              <div class="dgc-badges">
+                <span class="dgc-region">Europa</span>
+                <span class="dgc-pop-badge">⭐ Más popular</span>
+              </div>
+              <div class="dgc-rating">
+                <span class="dgc-star">★</span> 4.9 <small>(342)</small>
+              </div>
+            </div>
+            <div class="dgc-mid">
+              <div class="dgc-tags">
+                <span class="dgc-tag">Romántico</span>
+                <span class="dgc-tag">7 días</span>
+                <span class="dgc-tag">Cultura</span>
+              </div>
+              <h3 class="dgc-name">París</h3>
+              <p class="dgc-country">Francia</p>
+              <div class="dgc-includes">
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>Vuelos</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>Hotel 4★</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg>Desayuno</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Traslados</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Seguro</span>
+              </div>
+            </div>
+            <div class="dgc-foot">
+              <div>
+                <span class="dgc-price-label">Desde</span>
+                <div class="dgc-price-row">
+                  <strong class="dgc-price-num">$899</strong>
+                  <span class="dgc-price-per">/persona</span>
+                </div>
+              </div>
+              <a href="../index.html#contacto" class="dgc-btn">Ver paquete →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Roma -->
+        <article class="dgc reveal" data-region="europa" data-price="799" data-rating="4.9" data-order="3">
+          <div class="dgc-img">
+            <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=900&q=85" alt="Roma, Italia" loading="lazy" />
+          </div>
+          <div class="dgc-ov"></div>
+          <div class="dgc-body">
+            <div class="dgc-head">
+              <div class="dgc-badges"><span class="dgc-region">Europa</span></div>
+              <div class="dgc-rating"><span class="dgc-star">★</span> 4.9 <small>(218)</small></div>
+            </div>
+            <div class="dgc-mid">
+              <div class="dgc-tags"><span class="dgc-tag">Historia</span><span class="dgc-tag">6 días</span><span class="dgc-tag">Arte</span></div>
+              <h3 class="dgc-name">Roma</h3>
+              <p class="dgc-country">Italia</p>
+              <div class="dgc-includes">
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>Vuelos</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>Hotel 4★</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg>Desayuno</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Traslados</span>
+              </div>
+            </div>
+            <div class="dgc-foot">
+              <div>
+                <span class="dgc-price-label">Desde</span>
+                <div class="dgc-price-row"><strong class="dgc-price-num">$799</strong><span class="dgc-price-per">/persona</span></div>
+              </div>
+              <a href="../index.html#contacto" class="dgc-btn">Ver paquete →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Barcelona -->
+        <article class="dgc reveal" data-region="europa" data-price="720" data-rating="4.8" data-order="5">
+          <div class="dgc-img">
+            <img src="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=900&q=85" alt="Barcelona, España" loading="lazy" />
+          </div>
+          <div class="dgc-ov"></div>
+          <div class="dgc-body">
+            <div class="dgc-head">
+              <div class="dgc-badges"><span class="dgc-region">Europa</span></div>
+              <div class="dgc-rating"><span class="dgc-star">★</span> 4.8 <small>(195)</small></div>
+            </div>
+            <div class="dgc-mid">
+              <div class="dgc-tags"><span class="dgc-tag">Ciudad</span><span class="dgc-tag">5 días</span><span class="dgc-tag">Playa</span></div>
+              <h3 class="dgc-name">Barcelona</h3>
+              <p class="dgc-country">España</p>
+              <div class="dgc-includes">
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>Vuelos</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>Hotel 3★</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg>Desayuno</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Traslados</span>
+              </div>
+            </div>
+            <div class="dgc-foot">
+              <div>
+                <span class="dgc-price-label">Desde</span>
+                <div class="dgc-price-row"><strong class="dgc-price-num">$720</strong><span class="dgc-price-per">/persona</span></div>
+              </div>
+              <a href="../index.html#contacto" class="dgc-btn">Ver paquete →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Santorini -->
+        <article class="dgc reveal" data-region="europa" data-price="950" data-rating="4.9" data-order="7">
+          <div class="dgc-img">
+            <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=900&q=85" alt="Santorini, Grecia" loading="lazy" />
+          </div>
+          <div class="dgc-ov"></div>
+          <div class="dgc-body">
+            <div class="dgc-head">
+              <div class="dgc-badges"><span class="dgc-region">Europa</span></div>
+              <div class="dgc-rating"><span class="dgc-star">★</span> 4.9 <small>(167)</small></div>
+            </div>
+            <div class="dgc-mid">
+              <div class="dgc-tags"><span class="dgc-tag">Romántico</span><span class="dgc-tag">7 días</span><span class="dgc-tag">Isla</span></div>
+              <h3 class="dgc-name">Santorini</h3>
+              <p class="dgc-country">Grecia</p>
+              <div class="dgc-includes">
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>Vuelos</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>Hotel 5★</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg>Pensión</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Seguro</span>
+              </div>
+            </div>
+            <div class="dgc-foot">
+              <div>
+                <span class="dgc-price-label">Desde</span>
+                <div class="dgc-price-row"><strong class="dgc-price-num">$950</strong><span class="dgc-price-per">/persona</span></div>
+              </div>
+              <a href="../index.html#contacto" class="dgc-btn">Ver paquete →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── CARIBE ───────────────────────────────── -->
+
+        <!-- Cancún — Featured -->
+        <article class="dgc featured reveal" data-region="caribe" data-price="650" data-rating="4.8" data-order="2">
+          <div class="dgc-img">
+            <img src="https://images.unsplash.com/photo-1552074284-5e88ef1aef18?w=1200&q=85" alt="Cancún, México" loading="lazy" />
+          </div>
+          <div class="dgc-ov"></div>
+          <div class="dgc-body">
+            <div class="dgc-head">
+              <div class="dgc-badges">
+                <span class="dgc-region">Caribe</span>
+                <span class="dgc-pop-badge">🌊 Todo incluido</span>
+              </div>
+              <div class="dgc-rating"><span class="dgc-star">★</span> 4.8 <small>(489)</small></div>
+            </div>
+            <div class="dgc-mid">
+              <div class="dgc-tags"><span class="dgc-tag">Playa</span><span class="dgc-tag">5 días</span><span class="dgc-tag">All-inclusive</span></div>
+              <h3 class="dgc-name">Cancún</h3>
+              <p class="dgc-country">México</p>
+              <div class="dgc-includes">
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>Vuelos</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>Hotel 5★</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg>Todo incl.</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Traslados</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Seguro</span>
+              </div>
+            </div>
+            <div class="dgc-foot">
+              <div>
+                <span class="dgc-price-label">Desde</span>
+                <div class="dgc-price-row">
+                  <span class="dgc-price-old">$1,080</span>
+                  <strong class="dgc-price-num">$650</strong>
+                  <span class="dgc-price-per">/persona</span>
+                </div>
+              </div>
+              <a href="../index.html#contacto" class="dgc-btn">Ver paquete →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Punta Cana -->
+        <article class="dgc reveal" data-region="caribe" data-price="580" data-rating="4.7" data-order="6">
+          <div class="dgc-img">
+            <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=900&q=85" alt="Punta Cana, República Dominicana" loading="lazy" />
+          </div>
+          <div class="dgc-ov"></div>
+          <div class="dgc-body">
+            <div class="dgc-head">
+              <div class="dgc-badges"><span class="dgc-region">Caribe</span></div>
+              <div class="dgc-rating"><span class="dgc-star">★</span> 4.7 <small>(321)</small></div>
+            </div>
+            <div class="dgc-mid">
+              <div class="dgc-tags"><span class="dgc-tag">Playa</span><span class="dgc-tag">5 días</span><span class="dgc-tag">Relajación</span></div>
+              <h3 class="dgc-name">Punta Cana</h3>
+              <p class="dgc-country">República Dominicana</p>
+              <div class="dgc-includes">
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>Vuelos</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>Hotel 4★</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg>Desayuno</span>
+              </div>
+            </div>
+            <div class="dgc-foot">
+              <div>
+                <span class="dgc-price-label">Desde</span>
+                <div class="dgc-price-row"><strong class="dgc-price-num">$580</strong><span class="dgc-price-per">/persona</span></div>
+              </div>
+              <a href="../index.html#contacto" class="dgc-btn">Ver paquete →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── ASIA ────────────────────────────────── -->
+
+        <!-- Bali — Featured -->
+        <article class="dgc featured reveal" data-region="asia" data-price="1100" data-rating="4.8" data-order="4">
+          <div class="dgc-img">
+            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85" alt="Bali, Indonesia" loading="lazy" />
+          </div>
+          <div class="dgc-ov"></div>
+          <div class="dgc-body">
+            <div class="dgc-head">
+              <div class="dgc-badges">
+                <span class="dgc-region">Asia</span>
+                <span class="dgc-pop-badge">🌿 Exótico</span>
+              </div>
+              <div class="dgc-rating"><span class="dgc-star">★</span> 4.8 <small>(276)</small></div>
+            </div>
+            <div class="dgc-mid">
+              <div class="dgc-tags"><span class="dgc-tag">Aventura</span><span class="dgc-tag">10 días</span><span class="dgc-tag">Naturaleza</span></div>
+              <h3 class="dgc-name">Bali</h3>
+              <p class="dgc-country">Indonesia</p>
+              <div class="dgc-includes">
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>Vuelos</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>Villa privada</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg>Todo incl.</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Traslados</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Seguro</span>
+              </div>
+            </div>
+            <div class="dgc-foot">
+              <div>
+                <span class="dgc-price-label">Desde</span>
+                <div class="dgc-price-row"><strong class="dgc-price-num">$1,100</strong><span class="dgc-price-per">/persona</span></div>
+              </div>
+              <a href="../index.html#contacto" class="dgc-btn">Ver paquete →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Tokio -->
+        <article class="dgc reveal" data-region="asia" data-price="1200" data-rating="4.8" data-order="9">
+          <div class="dgc-img">
+            <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=900&q=85" alt="Tokio, Japón" loading="lazy" />
+          </div>
+          <div class="dgc-ov"></div>
+          <div class="dgc-body">
+            <div class="dgc-head">
+              <div class="dgc-badges"><span class="dgc-region">Asia</span></div>
+              <div class="dgc-rating"><span class="dgc-star">★</span> 4.8 <small>(143)</small></div>
+            </div>
+            <div class="dgc-mid">
+              <div class="dgc-tags"><span class="dgc-tag">Ciudad</span><span class="dgc-tag">8 días</span><span class="dgc-tag">Tecnología</span></div>
+              <h3 class="dgc-name">Tokio</h3>
+              <p class="dgc-country">Japón</p>
+              <div class="dgc-includes">
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>Vuelos</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>Hotel 4★</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg>Pensión</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Seguro</span>
+              </div>
+            </div>
+            <div class="dgc-foot">
+              <div>
+                <span class="dgc-price-label">Desde</span>
+                <div class="dgc-price-row"><strong class="dgc-price-num">$1,200</strong><span class="dgc-price-per">/persona</span></div>
+              </div>
+              <a href="../index.html#contacto" class="dgc-btn">Ver paquete →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Phuket -->
+        <article class="dgc reveal" data-region="asia" data-price="880" data-rating="4.7" data-order="10">
+          <div class="dgc-img">
+            <img src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=900&q=85" alt="Phuket, Tailandia" loading="lazy" />
+          </div>
+          <div class="dgc-ov"></div>
+          <div class="dgc-body">
+            <div class="dgc-head">
+              <div class="dgc-badges"><span class="dgc-region">Asia</span></div>
+              <div class="dgc-rating"><span class="dgc-star">★</span> 4.7 <small>(198)</small></div>
+            </div>
+            <div class="dgc-mid">
+              <div class="dgc-tags"><span class="dgc-tag">Playa</span><span class="dgc-tag">7 días</span><span class="dgc-tag">Spa</span></div>
+              <h3 class="dgc-name">Phuket</h3>
+              <p class="dgc-country">Tailandia</p>
+              <div class="dgc-includes">
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>Vuelos</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>Resort 4★</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg>Todo incl.</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Traslados</span>
+              </div>
+            </div>
+            <div class="dgc-foot">
+              <div>
+                <span class="dgc-price-label">Desde</span>
+                <div class="dgc-price-row"><strong class="dgc-price-num">$880</strong><span class="dgc-price-per">/persona</span></div>
+              </div>
+              <a href="../index.html#contacto" class="dgc-btn">Ver paquete →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── AMÉRICA ─────────────────────────────── -->
+
+        <!-- Nueva York -->
+        <article class="dgc reveal" data-region="america" data-price="750" data-rating="4.7" data-order="8">
+          <div class="dgc-img">
+            <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=900&q=85" alt="Nueva York, EE.UU." loading="lazy" />
+          </div>
+          <div class="dgc-ov"></div>
+          <div class="dgc-body">
+            <div class="dgc-head">
+              <div class="dgc-badges"><span class="dgc-region">América</span></div>
+              <div class="dgc-rating"><span class="dgc-star">★</span> 4.7 <small>(412)</small></div>
+            </div>
+            <div class="dgc-mid">
+              <div class="dgc-tags"><span class="dgc-tag">Ciudad</span><span class="dgc-tag">5 días</span><span class="dgc-tag">Compras</span></div>
+              <h3 class="dgc-name">Nueva York</h3>
+              <p class="dgc-country">Estados Unidos</p>
+              <div class="dgc-includes">
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>Vuelos</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>Hotel 4★</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Traslados</span>
+              </div>
+            </div>
+            <div class="dgc-foot">
+              <div>
+                <span class="dgc-price-label">Desde</span>
+                <div class="dgc-price-row"><strong class="dgc-price-num">$750</strong><span class="dgc-price-per">/persona</span></div>
+              </div>
+              <a href="../index.html#contacto" class="dgc-btn">Ver paquete →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Buenos Aires -->
+        <article class="dgc reveal" data-region="america" data-price="620" data-rating="4.6" data-order="11">
+          <div class="dgc-img">
+            <img src="https://images.unsplash.com/photo-1585208798174-6cedd4f4eb56?w=900&q=85" alt="Buenos Aires, Argentina" loading="lazy" />
+          </div>
+          <div class="dgc-ov"></div>
+          <div class="dgc-body">
+            <div class="dgc-head">
+              <div class="dgc-badges"><span class="dgc-region">América</span></div>
+              <div class="dgc-rating"><span class="dgc-star">★</span> 4.6 <small>(187)</small></div>
+            </div>
+            <div class="dgc-mid">
+              <div class="dgc-tags"><span class="dgc-tag">Ciudad</span><span class="dgc-tag">6 días</span><span class="dgc-tag">Gastronomía</span></div>
+              <h3 class="dgc-name">Buenos Aires</h3>
+              <p class="dgc-country">Argentina</p>
+              <div class="dgc-includes">
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>Vuelos</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>Hotel 3★</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg>Desayuno</span>
+              </div>
+            </div>
+            <div class="dgc-foot">
+              <div>
+                <span class="dgc-price-label">Desde</span>
+                <div class="dgc-price-row"><strong class="dgc-price-num">$620</strong><span class="dgc-price-per">/persona</span></div>
+              </div>
+              <a href="../index.html#contacto" class="dgc-btn">Ver paquete →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Cartagena -->
+        <article class="dgc reveal" data-region="america" data-price="480" data-rating="4.6" data-order="12">
+          <div class="dgc-img">
+            <img src="https://images.unsplash.com/photo-1516306580123-e6e52b1b7b5f?w=900&q=85" alt="Cartagena, Colombia" loading="lazy" />
+          </div>
+          <div class="dgc-ov"></div>
+          <div class="dgc-body">
+            <div class="dgc-head">
+              <div class="dgc-badges"><span class="dgc-region">América</span></div>
+              <div class="dgc-rating"><span class="dgc-star">★</span> 4.6 <small>(153)</small></div>
+            </div>
+            <div class="dgc-mid">
+              <div class="dgc-tags"><span class="dgc-tag">Colonial</span><span class="dgc-tag">4 días</span><span class="dgc-tag">Playa</span></div>
+              <h3 class="dgc-name">Cartagena</h3>
+              <p class="dgc-country">Colombia</p>
+              <div class="dgc-includes">
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>Vuelos</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>Hotel 3★</span>
+              </div>
+            </div>
+            <div class="dgc-foot">
+              <div>
+                <span class="dgc-price-label">Desde</span>
+                <div class="dgc-price-row"><strong class="dgc-price-num">$480</strong><span class="dgc-price-per">/persona</span></div>
+              </div>
+              <a href="../index.html#contacto" class="dgc-btn">Ver paquete →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── ORIENTE MEDIO ───────────────────────── -->
+
+        <!-- Dubái -->
+        <article class="dgc reveal" data-region="oriente" data-price="1050" data-rating="4.7" data-order="13">
+          <div class="dgc-img">
+            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=900&q=85" alt="Dubái, EAU" loading="lazy" />
+          </div>
+          <div class="dgc-ov"></div>
+          <div class="dgc-body">
+            <div class="dgc-head">
+              <div class="dgc-badges"><span class="dgc-region">Oriente Medio</span></div>
+              <div class="dgc-rating"><span class="dgc-star">★</span> 4.7 <small>(231)</small></div>
+            </div>
+            <div class="dgc-mid">
+              <div class="dgc-tags"><span class="dgc-tag">Lujo</span><span class="dgc-tag">6 días</span><span class="dgc-tag">Arquitectura</span></div>
+              <h3 class="dgc-name">Dubái</h3>
+              <p class="dgc-country">Emiratos Árabes</p>
+              <div class="dgc-includes">
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>Vuelos</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>Hotel 5★</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg>Pensión</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Traslados</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Seguro</span>
+              </div>
+            </div>
+            <div class="dgc-foot">
+              <div>
+                <span class="dgc-price-label">Desde</span>
+                <div class="dgc-price-row"><strong class="dgc-price-num">$1,050</strong><span class="dgc-price-per">/persona</span></div>
+              </div>
+              <a href="../index.html#contacto" class="dgc-btn">Ver paquete →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Maldivas — Featured -->
+        <article class="dgc featured reveal" data-region="oriente" data-price="1800" data-rating="5.0" data-order="14">
+          <div class="dgc-img">
+            <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=1200&q=85" alt="Maldivas" loading="lazy" />
+          </div>
+          <div class="dgc-ov"></div>
+          <div class="dgc-body">
+            <div class="dgc-head">
+              <div class="dgc-badges">
+                <span class="dgc-region">Oriente Medio</span>
+                <span class="dgc-pop-badge">💎 Lujo VIP</span>
+              </div>
+              <div class="dgc-rating"><span class="dgc-star">★</span> 5.0 <small>(89)</small></div>
+            </div>
+            <div class="dgc-mid">
+              <div class="dgc-tags"><span class="dgc-tag">Lujo</span><span class="dgc-tag">7 días</span><span class="dgc-tag">Buceo</span></div>
+              <h3 class="dgc-name">Maldivas</h3>
+              <p class="dgc-country">República de Maldivas</p>
+              <div class="dgc-includes">
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>Vuelos premium</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>Villa sobre el mar</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg>Todo incluido</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Transfer privado</span>
+                <span class="dgc-inc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Seguro VIP</span>
+              </div>
+            </div>
+            <div class="dgc-foot">
+              <div>
+                <span class="dgc-price-label">Desde</span>
+                <div class="dgc-price-row"><strong class="dgc-price-num">$1,800</strong><span class="dgc-price-per">/persona</span></div>
+              </div>
+              <a href="../index.html#contacto" class="dgc-btn">Ver paquete →</a>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /dgrid -->
+
+      <!-- PROMO BANNER -->
+      <div class="dest-promo reveal">
+        <div class="dest-promo-left">
+          <div class="dest-promo-ico">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+          </div>
+          <div class="dest-promo-text">
+            <h3>¿No encuentras tu destino ideal?</h3>
+            <p>Creamos paquetes personalizados a cualquier rincón del mundo. Cuéntanos a dónde quieres ir.</p>
+          </div>
+        </div>
+        <a href="../index.html#contacto" class="btn-gold">Solicitar destino personalizado →</a>
+      </div>
+
+    </div><!-- /destinos-wrap -->
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter-section">
+    <div class="newsletter-wrap">
+      <div class="newsletter-deco">✦</div>
+      <h2>Ofertas exclusivas<br><em>en tu correo</em></h2>
+      <p>Sé el primero en recibir descuentos de hasta 50% y paquetes secretos.</p>
+      <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+        <input type="email" placeholder="tu@correo.com" required />
+        <button type="submit">Suscribirse →</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="../index.html" class="footer-logo">ViajaYa</a>
+        <p>Hacemos realidad los viajes que siempre soñaste, con la mejor relación calidad-precio del mercado.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="TikTok">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.27 8.27 0 004.84 1.55V6.81a4.85 4.85 0 01-1.07-.12z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Destinos</h4>
+        <ul>
+          <li><a href="#">Europa</a></li>
+          <li><a href="#">Caribe</a></li>
+          <li><a href="#">Asia</a></li>
+          <li><a href="#">América</a></li>
+          <li><a href="#">Cruceros</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="#">Reserva de vuelos</a></li>
+          <li><a href="#">Hoteles</a></li>
+          <li><a href="#">Paquetes todo incluido</a></li>
+          <li><a href="#">Seguro de viaje</a></li>
+          <li><a href="#">Tours guiados</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="#">Sobre nosotros</a></li>
+          <li><a href="#">Blog de viajes</a></li>
+          <li><a href="#">Trabaja con nosotros</a></li>
+          <li><a href="#">Términos y condiciones</a></li>
+          <li><a href="#">Privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Tambor Adventures CR. Todos los derechos reservados. IATA Certified · SSL Secure</p>
+      <div class="payment-methods">
+        <span>VISA</span>
+        <span>Mastercard</span>
+        <span>PayPal</span>
+        <span>Stripe</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP -->
+  <a href="https://wa.me/18001234567?text=Hola,%20quiero%20información%20sobre%20viajes"
+     class="whatsapp-fab" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span>¿Necesitas ayuda?</span>
+  </a>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <script src="destinos.js"></script>
+</body>
+</html>
