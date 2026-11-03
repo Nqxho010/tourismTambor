@@ -3,12 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Tours en Tambor, Costa Rica: viaje en lancha a Isla Tortuga, tour en cuadraciclo y tour a caballo. Reserva fácil por WhatsApp." />
-  <title>Tambor Adventures CR — Tours en Tambor, Costa Rica</title>
+  <title data-i18n="meta.title">Tambor Tours Costa Rica | Isla Tortuga, Cuadraciclo y Caballo</title>
+  <meta name="description" data-i18n-content="meta.desc" content="Tours en Tambor, Costa Rica: lancha a Isla Tortuga con snorkel, tour en cuadraciclo y paseo a caballo. Salidas desde Tambor. Reserva fácil por WhatsApp." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+
+  <!-- URL canónica e idiomas (scripts/build.mjs pone el dominio real al publicar en Netlify) -->
+  <link rel="canonical" href="{{PAGE_URL}}" />
+  <link rel="alternate" hreflang="es" href="{{SITE_URL}}/" />
+  <link rel="alternate" hreflang="en" href="{{SITE_URL}}/en/" />
+  <link rel="alternate" hreflang="x-default" href="{{SITE_URL}}/" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0B2540" />
+
+  <!-- Vista previa al compartir (WhatsApp, Facebook, Instagram, X) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Tambor Adventures CR" />
+  <meta property="og:title" data-i18n-content="meta.title" content="Tambor Tours Costa Rica | Isla Tortuga, Cuadraciclo y Caballo" />
+  <meta property="og:description" data-i18n-content="meta.desc" content="Tours en Tambor, Costa Rica: lancha a Isla Tortuga con snorkel, tour en cuadraciclo y paseo a caballo. Salidas desde Tambor. Reserva fácil por WhatsApp." />
+  <meta property="og:url" content="{{PAGE_URL}}" />
+  <meta property="og:image" content="{{SITE_URL}}/images/og-cover.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" data-i18n-content="alt.hero" content="Lancha en la playa de Isla Tortuga, tour desde Tambor, Costa Rica" />
+  <meta property="og:locale" data-i18n-content="meta.locale" content="es_CR" />
+  <meta property="og:locale:alternate" data-i18n-content="meta.localeAlt" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="/style.css" />
+  <!--JSONLD-->
 </head>
 <body>
 
@@ -17,11 +46,11 @@
   <!-- NAVBAR -->
   <header class="navbar" id="navbar">
     <div class="nav-inner">
-      <a href="#inicio" class="logo">
+      <a href="#inicio" class="logo" aria-label="Tambor Adventures CR">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M2 17c2 0 2-1.5 4-1.5S8 17 10 17s2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5M2 21c2 0 2-1.5 4-1.5S8 21 10 21s2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5"/></svg>
         Tambor Adventures CR
       </a>
-      <nav class="nav-links" id="navLinks" aria-label="Principal">
+      <nav class="nav-links" id="navLinks" aria-label="Principal" data-i18n-aria="aria.nav">
         <a href="#tours" data-i18n="nav.tours">Tours</a>
         <a href="#isla-tortuga" data-i18n="nav.isla">Isla Tortuga</a>
         <a href="#galeria" data-i18n="nav.gallery">Fotos</a>
@@ -29,11 +58,11 @@
         <a href="#contacto" data-i18n="nav.contact">Contacto</a>
       </nav>
       <div class="nav-right">
-        <div class="lang-switch" role="group" aria-label="Idioma / Language">
-          <button type="button" class="lang-btn" data-lang="es" aria-pressed="true">ES</button>
-          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
-        </div>
-        <button class="nav-toggle" id="navToggle" aria-label="Menú" aria-expanded="false" aria-controls="navLinks">
+        <nav class="lang-switch" aria-label="Idioma / Language">
+          <a href="/" class="lang-btn" hreflang="es" lang="es" aria-current="page">ES</a>
+          <a href="/en/" class="lang-btn" hreflang="en" lang="en">EN</a>
+        </nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Menú" data-i18n-aria="aria.menu" aria-expanded="false" aria-controls="navLinks">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -44,11 +73,11 @@
 
     <!-- HERO -->
     <section class="hero" id="inicio">
-      <img class="hero-img" src="images/isla-tortuga/isla-tortuga-03.jpeg" alt="Lancha frente a la playa de Isla Tortuga, Costa Rica" data-i18n-alt="alt.hero" width="1600" height="1200" />
+      <img class="hero-img" src="/images/tours/tour-isla-tortuga-lancha-playa.webp" srcset="/images/tours/tour-isla-tortuga-lancha-playa-800.webp 800w, /images/tours/tour-isla-tortuga-lancha-playa.webp 1600w" sizes="100vw" alt="Lancha en la playa de Isla Tortuga, tour desde Tambor, Costa Rica" data-i18n-alt="alt.hero" width="1600" height="1200" fetchpriority="high" />
       <div class="hero-shade"></div>
       <div class="hero-content">
         <p class="hero-eyebrow" data-i18n="hero.eyebrow">Tambor · Península de Nicoya · Costa Rica</p>
-        <h1 data-i18n="hero.title">Tours en Tambor: mar, playa y aventura</h1>
+        <h1 data-i18n="hero.title">Tours en Tambor, Costa Rica: mar, playa y aventura</h1>
         <p class="hero-sub" data-i18n="hero.sub">Viaja en lancha a Isla Tortuga, recorre la zona en cuadraciclo o pasea a caballo. Tú eliges el tour y nosotros nos encargamos del resto.</p>
         <div class="hero-actions">
           <a href="#tours" class="btn btn-primary" data-i18n="hero.cta1">Ver los tours</a>
@@ -65,19 +94,19 @@
       <div class="wrap">
         <div class="section-head">
           <p class="section-tag" data-i18n="tours.tag">Elige tu aventura</p>
-          <h2 data-i18n="tours.title">Nuestros tours</h2>
-          <p class="section-sub" data-i18n="tours.sub">Tres formas de conocer Tambor y sus alrededores.</p>
+          <h2 data-i18n="tours.title">Nuestros tours en Tambor</h2>
+          <p class="section-sub" data-i18n="tours.sub">Tres tours en Tambor, Costa Rica, para disfrutar el mar, la playa y la naturaleza de la Península de Nicoya.</p>
         </div>
 
         <div class="tour-grid">
 
           <article class="tour-card">
             <div class="tour-media">
-              <img src="images/isla-tortuga/isla-tortuga-10.jpeg" alt="Vista aérea de la costa y el mar turquesa" data-i18n-alt="alt.aerial" loading="lazy" width="948" height="1600" />
+              <img src="/images/tours/isla-tortuga-vista-aerea-800.webp" alt="Vista aérea de Isla Tortuga y el mar turquesa del Golfo de Nicoya" data-i18n-alt="alt.aerial" loading="lazy" width="600" height="800" />
               <span class="tour-badge" data-i18n="t1.badge">En lancha</span>
             </div>
             <div class="tour-body">
-              <h3 data-i18n="t1.name">Isla Tortuga</h3>
+              <h3 data-i18n="t1.title">Tour a Isla Tortuga</h3>
               <p data-i18n="t1.desc">Paseo en lancha a una isla de arena blanca y agua turquesa. Snorkel, playa y frutas frescas.</p>
               <a href="#isla-tortuga" class="btn btn-primary btn-block" data-i18n="t1.btn">Ver detalles y fotos</a>
             </div>
@@ -86,11 +115,11 @@
           <article class="tour-card" id="cuadraciclo">
             <div class="tour-media tour-media-empty">
               <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="17" r="3.2"/><circle cx="18" cy="17" r="3.2"/><path d="M9 17h6M6 13.8 8.5 9H14l2.5 4.8M11 9V6.5h3"/></svg>
-              <img src="images/isla-tortuga/tour-cuadraciclo-01.png" alt="Disfruta de la naturaleza en un cuadraciclo" data-i18n-alt="alt.aerial" loading="lazy" width="948" height="1600" />
+              <img src="/images/tours/tour-cuadraciclo-tambor.webp" alt="Tour en cuadraciclo por la naturaleza de Tambor, Costa Rica" data-i18n-alt="alt.quad" loading="lazy" width="680" height="451" />
               <span class="tour-badge" data-i18n="t2.badge">En cuadraciclo</span>
             </div>
             <div class="tour-body">
-              <h3 data-i18n="t2.name">Tour en cuadraciclo</h3>
+              <h3 data-i18n="t2.title">Tour en cuadraciclo en Tambor</h3>
               <p data-i18n="t2.desc">Aventura en cuadraciclo por los alrededores de Tambor. Escríbenos y te contamos rutas, horarios y precio.</p>
               <a href="#contacto" class="btn btn-outline btn-block" data-wa="quad" target="_blank" rel="noopener" data-i18n="ask">Consultar por WhatsApp</a>
             </div>
@@ -102,7 +131,7 @@
               <span data-i18n="soon">Fotos próximamente</span>
             </div>
             <div class="tour-body">
-              <h3 data-i18n="t3.name">Tour a caballo</h3>
+              <h3 data-i18n="t3.title">Tour a caballo en Tambor</h3>
               <p data-i18n="t3.desc">Paseo a caballo para disfrutar la naturaleza de la zona con calma. Escríbenos y te contamos rutas, horarios y precio.</p>
               <a href="#contacto" class="btn btn-outline btn-block" data-wa="horse" target="_blank" rel="noopener" data-i18n="ask">Consultar por WhatsApp</a>
             </div>
@@ -117,11 +146,11 @@
       <div class="wrap">
         <div class="detail-grid">
           <div class="detail-photo">
-            <img src="images/isla-tortuga/isla-tortuga-12.jpeg" alt="Playa tranquila de agua transparente en Isla Tortuga" data-i18n-alt="alt.beach" loading="lazy" width="944" height="1600" />
+            <img src="/images/tours/playa-isla-tortuga-800.webp" srcset="/images/tours/playa-isla-tortuga-800.webp 472w, /images/tours/playa-isla-tortuga.webp 944w" sizes="(max-width: 960px) 100vw, 45vw" alt="Playa tranquila de agua transparente en Isla Tortuga" data-i18n-alt="alt.beach" loading="lazy" width="944" height="1600" />
           </div>
           <div class="detail-text">
             <p class="section-tag" data-i18n="isla.tag">Tour destacado</p>
-            <h2 data-i18n="isla.title">Tour a Isla Tortuga</h2>
+            <h2 data-i18n="isla.title">Tour a Isla Tortuga desde Tambor</h2>
             <p class="lead" data-i18n="isla.p1">Salimos en lancha desde Tambor hacia Isla Tortuga, una de las playas más lindas del Golfo de Nicoya: arena blanca, palmeras y agua turquesa.</p>
 
             <h3 data-i18n="isla.listTitle">Lo que vivirás</h3>
@@ -157,14 +186,14 @@
           <p class="section-sub" data-i18n="gal.sub">Fotos reales de nuestros viajes. Toca una foto para verla en grande.</p>
         </div>
         <div class="gallery" id="gallery">
-          <button type="button" class="gallery-item"><img src="images/isla-tortuga/isla-tortuga-03.jpeg" alt="Lancha frente a la playa de Isla Tortuga, Costa Rica" data-i18n-alt="alt.hero" loading="lazy" /></button>
-          <button type="button" class="gallery-item"><img src="images/isla-tortuga/isla-tortuga-09.jpeg" alt="Grupo haciendo snorkel en el mar" data-i18n-alt="alt.snorkel" loading="lazy" /></button>
-          <button type="button" class="gallery-item"><img src="images/isla-tortuga/isla-tortuga-07.jpeg" alt="Piña y sandía servidas en la playa" data-i18n-alt="alt.fruit" loading="lazy" /></button>
-          <button type="button" class="gallery-item"><img src="images/isla-tortuga/isla-tortuga-16.jpeg" alt="Grupo de viajeros en la lancha" data-i18n-alt="alt.group" loading="lazy" /></button>
-          <button type="button" class="gallery-item"><img src="images/isla-tortuga/isla-tortuga-05.jpeg" alt="Delfines nadando junto a la lancha" data-i18n-alt="alt.dolphins" loading="lazy" /></button>
-          <button type="button" class="gallery-item"><img src="images/isla-tortuga/isla-tortuga-02.jpeg" alt="Palmeras y playa en Isla Tortuga" data-i18n-alt="alt.palms" loading="lazy" /></button>
-          <button type="button" class="gallery-item"><img src="images/isla-tortuga/isla-tortuga-27.jpeg" alt="Viajeros nadando en agua turquesa" data-i18n-alt="alt.swim" loading="lazy" /></button>
-          <button type="button" class="gallery-item"><img src="images/isla-tortuga/isla-tortuga-25.jpeg" alt="Vista aérea de la costa y el mar turquesa" data-i18n-alt="alt.aerial" loading="lazy" /></button>
+          <button type="button" class="gallery-item"><img src="/images/tours/tour-isla-tortuga-lancha-playa-800.webp" data-full="/images/tours/tour-isla-tortuga-lancha-playa.webp" width="800" height="600" alt="Lancha en la playa de Isla Tortuga, tour desde Tambor, Costa Rica" data-i18n-alt="alt.hero" loading="lazy" /></button>
+          <button type="button" class="gallery-item"><img src="/images/tours/snorkel-isla-tortuga-800.webp" data-full="/images/tours/snorkel-isla-tortuga.webp" width="450" height="800" alt="Grupo haciendo snorkel en el mar" data-i18n-alt="alt.snorkel" loading="lazy" /></button>
+          <button type="button" class="gallery-item"><img src="/images/tours/frutas-playa-isla-tortuga-800.webp" data-full="/images/tours/frutas-playa-isla-tortuga.webp" width="600" height="800" alt="Piña y sandía servidas en la playa" data-i18n-alt="alt.fruit" loading="lazy" /></button>
+          <button type="button" class="gallery-item"><img src="/images/tours/grupo-lancha-tambor-800.webp" data-full="/images/tours/grupo-lancha-tambor.webp" width="600" height="800" alt="Grupo de viajeros en la lancha" data-i18n-alt="alt.group" loading="lazy" /></button>
+          <button type="button" class="gallery-item"><img src="/images/tours/delfines-golfo-nicoya-800.webp" data-full="/images/tours/delfines-golfo-nicoya.webp" width="450" height="800" alt="Delfines nadando junto a la lancha en el Golfo de Nicoya" data-i18n-alt="alt.dolphins" loading="lazy" /></button>
+          <button type="button" class="gallery-item"><img src="/images/tours/palmeras-isla-tortuga-800.webp" data-full="/images/tours/palmeras-isla-tortuga.webp" width="361" height="800" alt="Palmeras y playa en Isla Tortuga" data-i18n-alt="alt.palms" loading="lazy" /></button>
+          <button type="button" class="gallery-item"><img src="/images/tours/nadar-isla-tortuga-800.webp" data-full="/images/tours/nadar-isla-tortuga.webp" width="450" height="800" alt="Viajeros nadando en agua turquesa" data-i18n-alt="alt.swim" loading="lazy" /></button>
+          <button type="button" class="gallery-item"><img src="/images/tours/costa-vista-aerea-tambor-800.webp" data-full="/images/tours/costa-vista-aerea-tambor.webp" width="600" height="800" alt="Vista aérea de la costa de Tambor y el mar turquesa" data-i18n-alt="alt.coast" loading="lazy" /></button>
         </div>
       </div>
     </section>
@@ -196,8 +225,40 @@
       </div>
     </section>
 
+    <!-- FAQ -->
+    <section class="section" id="preguntas">
+      <div class="wrap faq-wrap">
+        <div class="section-head">
+          <p class="section-tag" data-i18n="faq.tag">Preguntas frecuentes</p>
+          <h2 data-i18n="faq.title">Preguntas sobre los tours en Tambor</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary data-i18n="faq.q1">¿Desde dónde sale el tour a Isla Tortuga?</summary>
+            <p data-i18n="faq.a1">Sale en lancha desde Tambor, en la Península de Nicoya. Al reservar te confirmamos el punto de encuentro exacto.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">¿Qué incluye el tour a Isla Tortuga?</summary>
+            <p data-i18n="faq.a2">Paseo en lancha por la costa, snorkel en agua clara, tiempo libre en la playa y frutas frescas (piña y sandía).</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">¿Cómo reservo un tour en Tambor?</summary>
+            <p data-i18n="faq.a3">Escríbenos por WhatsApp con el tour, la fecha y cuántas personas van. Te confirmamos disponibilidad, precio y punto de encuentro.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">¿Qué debo llevar?</summary>
+            <p data-i18n="faq.a4">Traje de baño, toalla, bloqueador solar y agua.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">¿Atienden en inglés?</summary>
+            <p data-i18n="faq.a5">Sí, respondemos en español y en inglés.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <!-- CONTACT -->
-    <section class="section" id="contacto">
+    <section class="section section-alt" id="contacto">
       <div class="wrap contact-grid">
         <div>
           <p class="section-tag" data-i18n="contact.tag">Contacto</p>
@@ -207,11 +268,11 @@
           <div class="channels">
             <a href="#contacto" class="channel" data-wa="general" target="_blank" rel="noopener">
               <span class="channel-icon channel-wa"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#wa-path"/></svg></span>
-              <span><strong>WhatsApp</strong><span data-contact="phone"></span></span>
+              <span><strong>WhatsApp</strong><span data-contact="phone">+506 8506 6459</span></span>
             </a>
-            <a href="#contacto" class="channel" data-contact-link="phone">
+            <a href="tel:+50685066459" class="channel" data-contact-link="phone">
               <span class="channel-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 16.920v3a2 2 0 01-2.180 2 19.790 19.790 0 01-8.630-3.070A19.500 19.500 0 013.070 10.800a19.790 19.790 0 01-3.070-8.670A2 2 0 012 0h3a2 2 0 012 1.720c.127.960.361 1.903.700 2.810a2 2 0 01-.450 2.110L6.090 7.910a16 16 0 006 6l1.270-1.270a2 2 0 012.110-.450c.907.339 1.850.573 2.810.700A2 2 0 0122 14.920z" transform="translate(1 1) scale(.92)"/></svg></span>
-              <span><strong data-i18n="contact.call">Llamar</strong><span data-contact="phone"></span></span>
+              <span><strong data-i18n="contact.call">Llamar</strong><span data-contact="phone">+506 8506 6459</span></span>
             </a>
             <a href="#contacto" class="channel" data-contact-link="email" hidden>
               <span class="channel-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></span>
@@ -270,7 +331,7 @@
         <p class="footer-logo">Tambor Adventures CR</p>
         <p data-i18n="footer.tagline">Tours en Tambor, Puntarenas, Costa Rica.</p>
       </div>
-      <nav class="footer-links" aria-label="Pie de página">
+      <nav class="footer-links" aria-label="Pie de página" data-i18n-aria="aria.footer">
         <a href="#tours" data-i18n="nav.tours">Tours</a>
         <a href="#isla-tortuga" data-i18n="nav.isla">Isla Tortuga</a>
         <a href="#galeria" data-i18n="nav.gallery">Fotos</a>
@@ -287,7 +348,7 @@
 
   <!-- LIGHTBOX -->
   <dialog class="lightbox" id="lightbox">
-    <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Cerrar">✕</button>
+    <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Cerrar" data-i18n-aria="aria.close">✕</button>
     <img id="lightboxImg" alt="" />
   </dialog>
 
@@ -298,6 +359,6 @@
     </defs>
   </svg>
 
-  <script src="app.js"></script>
+  <script src="/app.js"></script>
 </body>
 </html>
