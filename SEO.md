@@ -1,6 +1,6 @@
 # Guía SEO — Tambor Adventures CR (Netlify)
 
-Palabra clave principal: **"Tambor tours Costa Rica"**. Secundarias: *tour Isla Tortuga, Tortuga Island tour, tour en cuadraciclo Tambor, Tambor ATV tour, tour a caballo Tambor*.
+Palabras clave principales: **"tours Tambor"**, **"Tambor viajes"** e **"Isla Tortuga tours"** (en inglés: *Tambor tours, Tortuga Island tours*). Secundarias: *tour en cuadraciclo Tambor, Tambor ATV tour, tour a caballo Tambor, Tambor tours Costa Rica*.
 
 ---
 
