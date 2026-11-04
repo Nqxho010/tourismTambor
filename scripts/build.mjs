@@ -35,7 +35,7 @@ function translate(html, dict) {
       for (const [, kind, k] of tag.matchAll(/data-i18n-(alt|content|aria)="([^"]+)"/g)) {
         const attr = { alt: 'alt', content: 'content', aria: 'aria-label' }[kind];
         const t = get(k);
-        if (t != null) tag = tag.replace(new RegExp(`\\b${attr}="[^"]*"`), `${attr}="${escAttr(t)}"`);
+        if (t != null) tag = tag.replace(new RegExp(`(?<![\\w-])${attr}="[^"]*"`), `${attr}="${escAttr(t)}"`);
       }
       return tag;
     });
@@ -64,6 +64,9 @@ function jsonLd(dict, lang, pageUrl) {
         '@id': `${SITE_URL}/#negocio`,
         name: 'Tambor Adventures CR',
         alternateName: ['Tambor Tours Costa Rica', 'Tambor Adventures'],
+        keywords: lang === 'en'
+          ? 'Tambor tours, Tortuga Island tours, Tambor trips, Costa Rica tours'
+          : 'tours Tambor, viajes Tambor, tours Isla Tortuga, viajes a Isla Tortuga',
         description: dict['meta.desc'],
         url: `${SITE_URL}/`,
         image: `${SITE_URL}/images/og-cover.jpg`,

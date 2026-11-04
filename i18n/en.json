@@ -1,6 +1,6 @@
 {
-  "meta.title": "Tambor Tours Costa Rica | Tortuga Island, ATV & Horseback",
-  "meta.desc": "Tours in Tambor, Costa Rica: boat trip to Tortuga Island with snorkeling, ATV tour and horseback riding. Departures from Tambor. Easy booking on WhatsApp.",
+  "meta.title": "Tambor Tours & Tortuga Island Tours | Trips in Costa Rica",
+  "meta.desc": "Tambor tours and Tortuga Island boat trips, plus ATV and horseback riding tours. Departures from Tambor, Costa Rica. Easy booking on WhatsApp.",
   "meta.locale": "en_US",
   "meta.localeAlt": "es_CR",
 
@@ -17,14 +17,14 @@
   "nav.contact": "Contact",
 
   "hero.eyebrow": "Tambor · Nicoya Peninsula · Costa Rica",
-  "hero.title": "Tambor Tours, Costa Rica: sea, beach and adventure",
+  "hero.title": "Tambor tours and Tortuga Island trips",
   "hero.sub": "Take a boat to Tortuga Island, explore the area by ATV or go horseback riding. You pick the tour and we take care of the rest.",
   "hero.cta1": "See the tours",
   "hero.cta2": "Message us on WhatsApp",
 
   "tours.tag": "Choose your adventure",
   "tours.title": "Our Tambor tours",
-  "tours.sub": "Three tours in Tambor, Costa Rica, to enjoy the sea, the beach and the nature of the Nicoya Peninsula.",
+  "tours.sub": "Tambor tours in Costa Rica: boat trips to Tortuga Island, ATV and horseback riding to enjoy the sea, the beach and the nature of the Nicoya Peninsula.",
   "t1.badge": "By boat",
   "t1.name": "Tortuga Island",
   "t1.title": "Tortuga Island tour",
@@ -41,8 +41,8 @@
   "ask": "Ask on WhatsApp",
 
   "isla.tag": "Featured tour",
-  "isla.title": "Tortuga Island tour from Tambor",
-  "isla.p1": "We leave Tambor by boat for Tortuga Island, one of the most beautiful beaches in the Gulf of Nicoya: white sand, palm trees and turquoise water.",
+  "isla.title": "Tortuga Island tours from Tambor",
+  "isla.p1": "Our Tortuga Island trip leaves Tambor by boat. It is one of the most beautiful beaches in the Gulf of Nicoya: white sand, palm trees and turquoise water.",
   "isla.listTitle": "What you will enjoy",
   "isla.li1": "Boat ride along the coast",
   "isla.li2": "Snorkeling in calm, clear water",
@@ -55,7 +55,7 @@
   "isla.cta": "Book Tortuga Island",
 
   "gal.tag": "Gallery",
-  "gal.title": "Photos from the Tortuga Island tour",
+  "gal.title": "Photos from our Tortuga Island tours",
   "gal.sub": "Real photos from our trips. Tap a photo to see it larger.",
   "alt.hero": "Boat on the beach at Tortuga Island, tour from Tambor, Costa Rica",
   "alt.aerial": "Aerial view of Tortuga Island and the turquoise Gulf of Nicoya",
@@ -79,12 +79,12 @@
   "how.s3d": "We confirm availability, price and meeting point.",
 
   "faq.tag": "FAQ",
-  "faq.title": "Questions about our Tambor tours",
+  "faq.title": "Questions about our Tambor tours and trips",
   "faq.q1": "Where does the Tortuga Island tour leave from?",
   "faq.a1": "It leaves by boat from Tambor, on the Nicoya Peninsula. When you book we confirm the exact meeting point.",
   "faq.q2": "What does the Tortuga Island tour include?",
   "faq.a2": "A boat ride along the coast, snorkeling in clear water, free time on the beach and fresh fruit (pineapple and watermelon).",
-  "faq.q3": "How do I book a tour in Tambor?",
+  "faq.q3": "How do I book a tour or trip in Tambor?",
   "faq.a3": "Message us on WhatsApp with the tour, the date and how many people are coming. We confirm availability, price and meeting point.",
   "faq.q4": "What should I bring?",
   "faq.a4": "Swimsuit, towel, sunscreen and water.",
@@ -108,5 +108,5 @@
   "form.submit": "Send on WhatsApp",
   "form.note": "WhatsApp will open with your message ready to send.",
 
-  "footer.tagline": "Tours in Tambor, Puntarenas, Costa Rica."
+  "footer.tagline": "Tours and trips in Tambor, Puntarenas, Costa Rica."
 }
