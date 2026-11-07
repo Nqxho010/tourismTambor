@@ -55,7 +55,7 @@
   "isla.cta": "Book Tortuga Island",
 
   "gal.tag": "Gallery",
-  "gal.title": "Photos from our Tortuga Island tours",
+  "gal.title": "Photos from our Tortuga Island and ATV tours",
   "gal.sub": "Real photos from our trips. Tap a photo to see it larger.",
   "alt.hero": "Boat on the beach at Tortuga Island, tour from Tambor, Costa Rica",
   "alt.aerial": "Aerial view of Tortuga Island and the turquoise Gulf of Nicoya",
@@ -68,6 +68,14 @@
   "alt.dolphins": "Dolphins swimming next to the boat in the Gulf of Nicoya",
   "alt.palms": "Palm trees and beach at Tortuga Island",
   "alt.swim": "Travelers swimming in turquoise water",
+  "alt.quadSplash": "ATV splashing across a river on the Tambor tour",
+  "alt.quadRow": "Row of ATVs standing in the river in Tambor",
+  "alt.quadJungle": "ATVs in a river surrounded by jungle in Tambor",
+  "alt.quadForest": "Four ATVs in the river among the tropical forest",
+  "alt.quadRiver": "ATVs parked in the river during the tour",
+  "alt.quadCrossing": "ATVs and UTVs crossing the river",
+  "alt.utv": "UTV vehicle from the ATV tour in Tambor",
+  "alt.utvRiver": "UTVs and an ATV in the river in Tambor",
 
   "how.tag": "Quick and simple",
   "how.title": "How to book",
