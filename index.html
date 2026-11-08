@@ -43,6 +43,15 @@
 
   <a href="#tours" class="skip-link" data-i18n="skip">Saltar al contenido</a>
 
+  <!-- PROMO (la muestra app.js solo durante las fechas de PROMO) -->
+  <div class="promo-bar" id="promoBar" hidden>
+    <div class="promo-inner">
+      <p class="promo-text"><span class="promo-pct">-20%</span> <span data-i18n="promo.text">Noviembre y diciembre: ahorra 20% en todos los tours</span></p>
+      <a href="#contacto" class="promo-cta" data-wa="promo" target="_blank" rel="noopener" data-i18n="promo.cta">Reservar →</a>
+      <button type="button" class="promo-close" id="promoClose" aria-label="Cerrar aviso" data-i18n-aria="aria.promoClose">✕</button>
+    </div>
+  </div>
+
   <!-- NAVBAR -->
   <header class="navbar" id="navbar">
     <div class="nav-inner">
@@ -104,6 +113,7 @@
             <div class="tour-media">
               <img src="/images/tours/isla-tortuga-vista-aerea-800.webp" alt="Vista aérea de Isla Tortuga y el mar turquesa del Golfo de Nicoya" data-i18n-alt="alt.aerial" loading="lazy" width="600" height="800" />
               <span class="tour-badge" data-i18n="t1.badge">En lancha</span>
+              <span class="promo-badge" data-promo hidden>-20%</span>
             </div>
             <div class="tour-body">
               <h3 data-i18n="t1.title">Tour a Isla Tortuga</h3>
@@ -117,6 +127,7 @@
               <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="17" r="3.2"/><circle cx="18" cy="17" r="3.2"/><path d="M9 17h6M6 13.8 8.5 9H14l2.5 4.8M11 9V6.5h3"/></svg>
               <img src="/images/tours/cuadraciclo-cruzando-rio-tambor-800.webp" alt="Tour en cuadraciclo por la naturaleza de Tambor, Costa Rica" data-i18n-alt="alt.quad" loading="lazy" width="600" height="800" />
               <span class="tour-badge" data-i18n="t2.badge">En cuadraciclo</span>
+              <span class="promo-badge" data-promo hidden>-20%</span>
             </div>
             <div class="tour-body">
               <h3 data-i18n="t2.title">Tour en cuadraciclo en Tambor</h3>
@@ -129,6 +140,7 @@
             <div class="tour-media tour-media-empty">
               <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20v-5.5L3.5 11 7 4l2 2.5c4.5-.5 9 2 9.500 6.500V20M9.500 20v-4.500h5V20M7 8.500h.01"/></svg>
               <span data-i18n="soon">Fotos próximamente</span>
+              <span class="promo-badge" data-promo hidden>-20%</span>
             </div>
             <div class="tour-body">
               <h3 data-i18n="t3.title">Tour a caballo en Tambor</h3>

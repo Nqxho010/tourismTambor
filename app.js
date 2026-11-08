@@ -17,14 +17,20 @@ const WA_MSG = {
     isla: 'Hola, quiero reservar el tour a Isla Tortuga.',
     quad: 'Hola, quiero información sobre el tour en cuadraciclo.',
     horse: 'Hola, quiero información sobre el tour a caballo.',
+    promo: 'Hola, quiero aprovechar el 20% de descuento de noviembre y diciembre en los tours.',
   },
   en: {
     general: 'Hi, I would like information about your tours.',
     isla: 'Hi, I would like to book the Tortuga Island tour.',
     quad: 'Hi, I would like information about the ATV tour.',
     horse: 'Hi, I would like information about the horseback riding tour.',
+    promo: 'Hi, I would like to take advantage of the 20% November and December discount on your tours.',
   },
 };
+
+// Promoción: la barra y las etiquetas -20% solo se muestran entre estas fechas (incluidas).
+// Pasada la fecha "end" se ocultan solas.
+const PROMO = { start: '2026-11-01', end: '2026-12-31' };
 
 const FORM_TXT = {
   es: { hi: 'Hola, soy', tour: 'Tour', date: 'Fecha', people: 'Personas' },
@@ -44,6 +50,32 @@ function waLink(text) {
 document.querySelectorAll('[data-wa]').forEach(el => {
   el.href = waLink(WA_MSG[lang][el.dataset.wa]);
 });
+
+// ============================
+// PROMOCIÓN
+// ============================
+(() => {
+  const d = new Date();
+  const todayStr = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+  if (todayStr < PROMO.start || todayStr > PROMO.end) return;
+
+  document.querySelectorAll('[data-promo]').forEach(el => { el.hidden = false; });
+
+  const bar = document.getElementById('promoBar');
+  const key = `promoClosed-${PROMO.end}`;
+  let closed = false;
+  try { closed = localStorage.getItem(key) === '1'; } catch {}
+  if (closed) return;
+
+  bar.hidden = false;
+  requestAnimationFrame(() => requestAnimationFrame(() => bar.classList.add('show')));
+  document.getElementById('promoClose').addEventListener('click', () => {
+    bar.classList.remove('show');
+    bar.addEventListener('transitionend', () => { bar.hidden = true; }, { once: true });
+    setTimeout(() => { bar.hidden = true; }, 600);
+    try { localStorage.setItem(key, '1'); } catch {}
+  });
+})();
 
 // ============================
 // CONTACTO
