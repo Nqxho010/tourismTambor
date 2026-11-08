@@ -322,6 +322,57 @@ a.channel:hover { border-color: var(--ink); }
 .reveal { opacity: 0; transform: translateY(16px); transition: opacity .5s ease, transform .5s ease; }
 .reveal.visible { opacity: 1; transform: none; }
 
+/* ============================
+   PROMO
+   ============================ */
+.promo-bar {
+  display: grid; grid-template-rows: 0fr;
+  background: var(--accent); color: var(--ink);
+  transition: grid-template-rows .5s ease;
+  position: relative; overflow: hidden;
+}
+.promo-bar.show { grid-template-rows: 1fr; }
+.promo-bar[hidden] { display: none; }
+.promo-bar::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(110deg, transparent 35%, rgba(255,255,255,.45) 50%, transparent 65%);
+  transform: translateX(-100%);
+  animation: promo-shine 5s ease-in-out 1s infinite;
+}
+.promo-inner {
+  min-height: 0; overflow: hidden;
+  max-width: 1160px; margin: 0 auto; padding: 0 56px 0 24px;
+  display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 4px 16px;
+}
+.promo-bar.show .promo-inner { padding-top: 10px; padding-bottom: 10px; }
+.promo-text { font-weight: 600; font-size: .9375rem; text-align: center; }
+.promo-pct {
+  display: inline-block; background: var(--ink); color: #fff;
+  padding: 2px 8px; border-radius: 999px; margin-right: 4px; font-weight: 700;
+  animation: promo-pulse 2.4s ease-in-out infinite;
+}
+.promo-cta {
+  position: relative; z-index: 1;
+  font-weight: 700; font-size: .9375rem; color: var(--ink);
+  text-decoration: underline; text-underline-offset: 3px;
+}
+.promo-cta:hover { text-decoration-thickness: 2px; }
+.promo-close {
+  position: absolute; z-index: 1; top: 50%; right: 12px; transform: translateY(-50%);
+  width: 36px; height: 36px; border: 0; border-radius: 50%;
+  background: transparent; color: var(--ink); font-size: 1rem; cursor: pointer;
+}
+.promo-close:hover { background: rgba(11,37,64,.12); }
+.promo-badge {
+  position: absolute; top: 14px; right: 14px; z-index: 1;
+  background: var(--accent); color: var(--ink);
+  font-size: .9375rem; font-weight: 700; padding: 6px 12px; border-radius: 999px;
+  box-shadow: 0 4px 14px rgba(255,107,53,.45);
+  animation: promo-pulse 2.4s ease-in-out infinite;
+}
+@keyframes promo-shine { 0%, 60% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+@keyframes promo-pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.08); } }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; }
