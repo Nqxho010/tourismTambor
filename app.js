@@ -5,8 +5,8 @@
 // Cambia estos valores por los reales. Se usan en toda la página.
 // ============================
 const CONTACT = {
-  whatsapp: '50685066459',        // solo números, con código de país (506)
-  phoneDisplay: '+506 8506 6459', // como se muestra en pantalla
+  whatsapp: '50657030613',        // solo números, con código de país (506)
+  phoneDisplay: '+506 5703 0613', // como se muestra en pantalla
   email: '',                      // déjalo vacío para ocultar el correo
 };
 
